@@ -4,6 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 .flex {
     display: flex;
@@ -14,14 +15,29 @@
     max-width: 1500px;
     min-height: 100vh;
 }
+.btn {
+    width: max-content;
+    padding: .5em 1em;
+    background: none;
+    border: none;
+    border-bottom: 2px solid $white-clr;
+    color: $white-clr;
+    align-self: flex-end;
+    margin-top: auto;
+    cursor: pointer;
+}
 h1, h2, h3, a {
     font-family: var(--ff-titles);
     color: $black-clr;
     text-decoration: none;
 }
 h1, h2 {
-    font-size: var(--fs-title)
+    font-size: var(--fs-title);
 }
 h3, a {
-    font-size: var(--fs-semi-title)
+    font-size: var(--fs-semi-title);
+}
+p, li, button {
+    font-family: var(--ff-text);
+    font-size: var(--fs-text);
 }

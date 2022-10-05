@@ -27,7 +27,7 @@ const Hero = () => {
         <Fade triggerOnce delay={100} duration={1000}>
           <h1>Skapar <span>responsiva</span> <br /> och <span>användarvänliga</span> <br /> hemsidor</h1>
         </Fade>
-        <Fade triggerOnce cascade damping={0.5} delay={4000}>
+        <Fade triggerOnce cascade damping={0.5} delay={2500}>
           <ul>
             <img src={downOne} alt="" />
             <img src={downTwo} alt="" />
