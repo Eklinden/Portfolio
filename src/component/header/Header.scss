@@ -1,0 +1,15 @@
+@import '../../scss/standard.scss';
+@import '../../scss/variables.scss';
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 7rem;
+    gap: 1rem;
+    figure {
+        width: 4rem;
+        img {
+            width: 100%;
+        }
+    }
+}

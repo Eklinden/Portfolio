@@ -1,0 +1,50 @@
+@import '../../scss/standard.scss';
+@import '../../scss/variables.scss';
+
+.hero {
+    display: flex;
+    position: relative;
+    height: 90vh;
+    .watermark-icon {
+        z-index: -1;
+        position: absolute;
+        top: -5rem;
+        right: -5rem;
+        img {
+            width: 100%;
+        }
+    }
+}
+.hero-text {
+    width: 100%;
+    display: flex;
+    margin-top: 20%;
+    gap: 1rem;
+    ul {
+        background: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        margin: 30% 0 0 auto;
+        cursor: pointer;
+        height:max-content;
+    }
+    h2 {
+        color: rgba(143, 143, 143, 0.562);
+        width: max-content;
+        display: flex;
+        span {
+            color: $primary-clr;
+        }
+    }
+    .line {
+        margin-top: .5rem;
+        height: 90%;
+    }
+    h1 {
+
+        span {
+            @extend %linear-text
+        }
+    }
+}

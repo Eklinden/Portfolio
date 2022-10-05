@@ -1,32 +1,74 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { keyframes } from "@emotion/react";
+import { useState } from 'react';
+import { Fade, Reveal } from 'react-awesome-reveal';
+import './App.scss';
+import CodeLang from './component/codelang/CodeLang';
+import Contact from './component/contact/Contact';
+import Header from './component/header/Header';
+import Hero from './component/hero/Hero';
+import Projects from './component/projects/Projects';
+import './scss/standard.scss';
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [showContent, setshowContent] = useState(true)
+  setTimeout(() => {
+    setshowContent(false)
+  }, 3500);
+  
+  const loadOutAni = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
 
-  return (
+  30% {
+    opacity: 1;
+    transform: translateY(-115px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-115px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+`;
+
+  return (      
     <div className="App">
+      {
+        showContent? (
+          <div className="centered">
+            <h1 id="loading-text">
+              <Reveal keyframes={loadOutAni} duration={2200} cascade damping={.035}>
+                <div className="chars">l</div>
+                <div className="chars">i</div>
+                <div className="chars">n</div>
+                <div className="chars">u</div>
+                <div className="chars">s</div>
+                <div className="chars">.</div>
+                <div className="chars">e</div>
+                <div className="chars">k</div>
+                <div className="chars">l</div>
+                <div className="chars">i</div>
+                <div className="chars">n</div>
+                <div className="chars">d</div>
+              </Reveal>
+            </h1>
+          </div>
+        ):
+        (
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <Header/>
+        <Hero />
+        <Projects />
+        <CodeLang />
+        <Contact />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        )
+      }
     </div>
   )
 }

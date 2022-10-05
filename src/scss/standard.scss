@@ -1,0 +1,27 @@
+@import './variables.scss';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.flex {
+    display: flex;
+}
+.App {
+    margin: 0 auto;
+    padding: 0 5%;
+    max-width: 1500px;
+    min-height: 100vh;
+}
+h1, h2, h3, a {
+    font-family: var(--ff-titles);
+    color: $black-clr;
+    text-decoration: none;
+}
+h1, h2 {
+    font-size: var(--fs-title)
+}
+h3, a {
+    font-size: var(--fs-semi-title)
+}
