@@ -4,6 +4,7 @@ import { Fade, Reveal } from 'react-awesome-reveal';
 import './App.scss';
 import CodeLang from './component/codelang/CodeLang';
 import Contact from './component/contact/Contact';
+import Footer from './component/footer/Footer';
 import Header from './component/header/Header';
 import Hero from './component/hero/Hero';
 import Projects from './component/projects/Projects';
@@ -66,6 +67,7 @@ function App() {
         <Projects />
         <CodeLang />
         <Contact />
+        <Footer />
       </div>
         )
       }

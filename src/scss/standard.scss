@@ -26,6 +26,23 @@
     margin-top: auto;
     cursor: pointer;
 }
+.btn--submit {
+    margin-top: 2rem;
+    color: $black-clr;
+    border-bottom: 2px solid $primary-clr;
+    align-self: flex-start;
+}
+.section-number {
+    color: rgba(143, 143, 143, 0.562);
+    width: max-content;
+    display: flex;
+    span {
+        color: $primary-clr;
+    }
+}
+.section-title {
+    color: $black-clr;
+}
 h1, h2, h3, a {
     font-family: var(--ff-titles);
     color: $black-clr;
@@ -37,7 +54,7 @@ h1, h2 {
 h3, a {
     font-size: var(--fs-semi-title);
 }
-p, li, button {
+p, li, button, input, textarea, label {
     font-family: var(--ff-text);
     font-size: var(--fs-text);
 }
