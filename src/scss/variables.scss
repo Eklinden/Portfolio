@@ -1,29 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Bebas+Neue&display=swap");
 // SCSS variables
 
 $primary-clr: #3fddea;
 $black-clr: #282828;
-$white-clr: #FFFFFF;
-$background-clr: #F9F9F9;
+$white-clr: #ffffff;
+$background-clr: #f9f9f9;
 
 :root {
-    --fs-title: 64px;
-    --fs-semi-title: 35px;
-    --fs-text: 20px;
+  --fs-title: 64px;
+  --fs-semi-title: 35px;
+  --fs-text: 20px;
 
-    --ff-titles: 'Bebas Neue', cursive;
-    --ff-text: 'Be Vietnam Pro', sans-serif;
+  --ff-titles: "Bebas Neue", cursive;
+  --ff-text: "Be Vietnam Pro", sans-serif;
 }
-
-
 
 %linear-text {
-    background: linear-gradient(#5FF3EA, #00B3EB);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+  background: linear-gradient(#5ff3ea, #00b3eb);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 @keyframes dash {
-    100%{
-        stroke-dashoffset: 0;
-    }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@media screen and (max-width: 1400px) {
+  :root {
+    --fs-title: 50px;
+    --fs-semi-title: 25px;
+    --fs-text: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --fs-title: 40px;
+    --fs-semi-title: 25px;
+    --fs-text: 16px;
+  }
 }

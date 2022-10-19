@@ -3,30 +3,36 @@
 
 .hero {
   display: flex;
+  flex-direction: column;
   position: relative;
-  height: 90vh;
+  height: 100vh;
   .watermark-icon {
     z-index: -1;
+    background-image: url(../../assets/code-icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
     position: absolute;
-    top: -5rem;
-    right: -5rem;
+    top: 0rem;
+    right: 0rem;
+    width: 40rem;
+    height: 30rem;
     img {
       width: 100%;
     }
   }
 }
 .hero-text {
-  width: 100%;
+  flex: 1;
   display: flex;
-  margin-top: 20%;
   gap: 1rem;
+  margin-top: 10rem;
   ul {
     background: none;
     border: none;
     display: flex;
     flex-direction: column;
-    margin: 30% 0 0 auto;
     height: max-content;
+    margin-bottom: 3rem;
   }
   h2 {
     color: rgba(143, 143, 143, 0.562);
@@ -37,13 +43,51 @@
     }
   }
   .line {
-    margin-top: 0.5rem;
+    margin: 0.5rem 0 5rem 0;
     height: 90%;
   }
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5rem;
+    padding-left: 2rem;
+  }
   h1 {
-    padding-left: 5rem;
     span {
       @extend %linear-text;
     }
+  }
+}
+@media screen and (min-height: 1400px) {
+  .hero {
+    height: max-content;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .hero-text {
+    section {
+      padding-left: 1rem;
+    }
+  }
+}
+@media screen and (max-width: 770px) {
+  .watermark-icon {
+    width: 30rem !important;
+    height: 20rem !important;
+    top: 0 !important;
+    right: 0 !important;
+  }
+  .hero-text {
+    section {
+      padding-left: 0;
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .watermark-icon {
+    top: 2rem !important;
+    width: 18rem !important;
+    height: 15rem !important;
   }
 }

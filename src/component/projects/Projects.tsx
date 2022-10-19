@@ -1,8 +1,5 @@
 import { Fade } from "react-awesome-reveal";
 import Line from "../../assets/line.svg";
-import QuestionPic from "../../assets/questionmark.png";
-import RewindPic from "../../assets/rewind.png";
-import SpotifyPic from "../../assets/Spotify.png";
 import "./Projects.scss";
 
 const Projects = () => {
@@ -12,7 +9,7 @@ const Projects = () => {
         2 <span>.</span>
       </h2>
       <figure>
-        <img src={Line} alt="" />
+        <img className="line" src={Line} alt="" />
       </figure>
       <div className="projects-container">
         <h2 className="section-title project-title">projekt</h2>
@@ -22,18 +19,16 @@ const Projects = () => {
             triggerOnce
             fraction={1}
             direction="left"
-            duration={2000}
+            duration={1500}
           >
-            <figure>
-              <img src={RewindPic} alt="" />
-            </figure>
+            <div></div>
           </Fade>
           <Fade
             triggerOnce
             fraction={1}
             className="card-text-container"
             direction="right"
-            duration={2000}
+            duration={1500}
           >
             <section>
               <h2>rewind</h2>
@@ -43,10 +38,9 @@ const Projects = () => {
                 <li>CSS</li>
                 <li>JS</li>
                 <li>REACT</li>
+                <li>Docker</li>
               </ul>
-              <a href="" className="btn">
-                Se Projekt
-              </a>
+              <h3 className="btn btn--disabled">temporärt nedlagt</h3>
             </section>
           </Fade>
         </article>
@@ -56,7 +50,7 @@ const Projects = () => {
             fraction={1}
             className="card-text-container"
             direction="left"
-            duration={2000}
+            duration={1500}
           >
             <section>
               <h2>Spotify Lissner</h2>
@@ -67,7 +61,11 @@ const Projects = () => {
                 <li>JS</li>
                 <li>API</li>
               </ul>
-              <a href="https://eklinden.github.io/Spotify/" className="btn">
+              <a
+                href="https://eklinden.github.io/Spotify/"
+                target="_blank"
+                className="btn"
+              >
                 Se Projekt
               </a>
             </section>
@@ -77,11 +75,9 @@ const Projects = () => {
             triggerOnce
             fraction={1}
             direction="right"
-            duration={2000}
+            duration={1500}
           >
-            <figure>
-              <img src={SpotifyPic} alt="" />
-            </figure>
+            <div></div>
           </Fade>
         </article>
         <article className="project-card">
@@ -90,18 +86,16 @@ const Projects = () => {
             triggerOnce
             fraction={1}
             direction="left"
-            duration={2000}
+            duration={1500}
           >
-            <figure>
-              <img src={QuestionPic} alt="" />
-            </figure>
+            <div></div>
           </Fade>
           <Fade
             triggerOnce
             fraction={1}
             className="card-text-container"
             direction="right"
-            duration={2000}
+            duration={1500}
           >
             <section>
               <h2>In-progress</h2>
@@ -114,9 +108,7 @@ const Projects = () => {
                 <li>LowDB</li>
                 <li>Express</li>
               </ul>
-              <a href="" className="btn">
-                Se Projekt
-              </a>
+              <h3 className="btn btn--disabled">snart</h3>
             </section>
           </Fade>
         </article>

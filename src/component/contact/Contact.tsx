@@ -5,23 +5,15 @@ import { refObj } from "../../interface/data";
 import "./Contact.scss";
 
 const Contact = () => {
-  const [emailOpen, setEmailOpen] = useState(false);
   const [nameOpen, setNameOpen] = useState(false);
   const [messageOpen, setMessageOpen] = useState(false);
 
   const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 
   function checkName() {
     if (!name) {
       setNameOpen(false);
-    }
-    return;
-  }
-  function checkEmail() {
-    if (!email) {
-      setEmailOpen(false);
     }
     return;
   }
@@ -31,22 +23,25 @@ const Contact = () => {
     }
     return;
   }
+  function sendMail() {
+    window.open(`mailto:l.eklind1@gmail.com?subject=${name}&body=${message}`);
+  }
 
   return (
     <article className="contact">
       <h2 className="section-number">
         4 <span>.</span>
       </h2>
-      <figure>
+      <figure className="line">
         <img src={Line} alt="" />
       </figure>
       <section className="contact-container">
         <h2 className="section-title">kontakta mig</h2>
-        <form action="" className="contact-form">
+        <form onSubmit={() => sendMail()} className="contact-form">
           <Fade
             triggerOnce
             direction="left"
-            duration={1500}
+            duration={1000}
             cascade
             damping={0.1}
           >
@@ -61,19 +56,6 @@ const Contact = () => {
               />
               <label className={nameOpen ? "targeted" : ""} htmlFor="">
                 Namn*
-              </label>
-            </div>
-            <div className="user-box">
-              <input
-                onChange={(e) => setEmail(e.target.value)}
-                onBlur={() => checkEmail()}
-                onSelect={() => setEmailOpen(true)}
-                type="email"
-                name=""
-                required
-              />
-              <label className={emailOpen ? "targeted" : ""} htmlFor="">
-                E-mail*
               </label>
             </div>
             <div className="user-box">

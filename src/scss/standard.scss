@@ -1,60 +1,89 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+#root {
+  display: flex;
+  justify-content: center;
 }
 .flex {
-    display: flex;
+  display: flex;
 }
 .App {
-    margin: 0 auto;
-    padding: 0 5%;
-    max-width: 1500px;
-    min-height: 100vh;
+  padding: 0 5%;
+  width: 100%;
+  max-width: 1500px;
+  height: max-content;
+  overflow-x: hidden;
+  overflow: hidden;
+  display: inline-block;
 }
 .btn {
-    width: max-content;
-    padding: .5em 1em;
-    background: none;
-    border: none;
-    border-bottom: 2px solid $white-clr;
-    color: $white-clr;
-    align-self: flex-end;
-    margin-top: auto;
-    cursor: pointer;
+  width: max-content;
+  padding: 0.2em 1em;
+  background: none;
+  border: none;
+  border-bottom: 2px solid $white-clr;
+  color: $white-clr;
+  align-self: flex-end;
+  margin-top: auto;
+  cursor: pointer;
 }
 .btn--submit {
-    margin-top: 2rem;
-    color: $black-clr;
-    border-bottom: 2px solid $primary-clr;
-    align-self: flex-start;
+  margin-top: 2rem;
+  color: $black-clr;
+  border-bottom: 2px solid $primary-clr;
+  align-self: flex-start;
+}
+.btn--disabled {
+  color: grey;
+  border-bottom: 2px solid grey;
+  cursor: default;
 }
 .section-number {
-    color: rgba(143, 143, 143, 0.562);
-    width: max-content;
-    display: flex;
-    span {
-        color: $primary-clr;
-    }
+  color: rgba(143, 143, 143, 0.562);
+  width: max-content;
+  display: flex;
+  span {
+    color: $primary-clr;
+  }
 }
 .section-title {
-    color: $black-clr;
+  color: $black-clr;
 }
-h1, h2, h3, a {
-    font-family: var(--ff-titles);
-    color: $black-clr;
-    text-decoration: none;
+h1,
+h2,
+h3,
+a {
+  font-family: var(--ff-titles);
+  color: $black-clr;
+  text-decoration: none;
 }
-h1, h2 {
-    font-size: var(--fs-title);
+h1,
+h2 {
+  font-size: var(--fs-title);
 }
-h3, a {
-    font-size: var(--fs-semi-title);
+h3,
+a {
+  font-size: var(--fs-semi-title);
 }
-p, li, button, input, textarea, label {
-    font-family: var(--ff-text);
-    font-size: var(--fs-text);
+p,
+li,
+button,
+input,
+textarea,
+label {
+  font-family: var(--ff-text);
+  font-size: var(--fs-text);
+}
+
+@media screen and (max-width: 770px) {
+  .line,
+  .section-number {
+    display: none;
+  }
 }
