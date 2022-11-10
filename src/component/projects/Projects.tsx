@@ -98,8 +98,8 @@ const Projects = () => {
             duration={1500}
           >
             <section>
-              <h2>In-progress</h2>
-              <p>En Escargot resturang <span>(Första renderingen är väldigt långsam)</span></p>
+              <h2>Escargot-To-Go</h2>
+              <p>En Escargot resturang <span>(Första renderingen är väldigt långsam pga billig hosting)</span></p>
               <ul>
                 <li>HTML</li>
                 <li>CSS</li>
