@@ -99,7 +99,7 @@ const Projects = () => {
           >
             <section>
               <h2>In-progress</h2>
-              <p>En Escargot resturang</p>
+              <p>En Escargot resturang (Första renderingen är väldigt långsam)</p>
               <ul>
                 <li>HTML</li>
                 <li>CSS</li>
@@ -108,7 +108,6 @@ const Projects = () => {
                 <li>LowDB</li>
                 <li>Express</li>
               </ul>
-              <p>Första renderingen är väldigt långsam</p>
               <a
                 href="https://escargot-to-go.onrender.com"
                 target="_blank"
