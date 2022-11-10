@@ -99,7 +99,7 @@ const Projects = () => {
           >
             <section>
               <h2>In-progress</h2>
-              <p>En Escargot resturang (Första renderingen är väldigt långsam)</p>
+              <p>En Escargot resturang <span>(Första renderingen är väldigt långsam)</span></p>
               <ul>
                 <li>HTML</li>
                 <li>CSS</li>

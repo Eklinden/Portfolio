@@ -57,6 +57,9 @@
         color: $white-clr;
         padding: 0;
         height: max-height;
+        span{
+          color: grey;
+        }
       }
     }
     .card-text-container--left {
