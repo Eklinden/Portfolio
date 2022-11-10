@@ -108,7 +108,14 @@ const Projects = () => {
                 <li>LowDB</li>
                 <li>Express</li>
               </ul>
-              <h3 className="btn btn--disabled">snart</h3>
+              <p>Första renderingen är väldigt långsam</p>
+              <a
+                href="https://escargot-to-go.onrender.com"
+                target="_blank"
+                className="btn"
+              >
+                Se Projekt
+              </a>
             </section>
           </Fade>
         </article>
