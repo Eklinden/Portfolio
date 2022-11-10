@@ -1,7 +1,7 @@
 import { Fade } from "react-awesome-reveal";
-import downOne from "../../assets/down/downOne.svg";
-import downThree from "../../assets/down/downThree.svg";
-import downTwo from "../../assets/down/downTwo.svg";
+import downOne from "../../assets/arrow-down/downOne.svg";
+import downThree from "../../assets/arrow-down/downThree.svg";
+import downTwo from "../../assets/arrow-down/downTwo.svg";
 import Line from "../../assets/line.svg";
 import Header from "../header/Header";
 
